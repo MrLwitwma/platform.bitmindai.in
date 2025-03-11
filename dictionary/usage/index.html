@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitMindAI Dictionary API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .code-box {
+            background: #2b2b2b;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+            font-family: monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            position: relative;
+        }
+
+        button {
+            background-color: #ffcc00;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #e6b800;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BitMindAI Dictionary API</h1>
+        <p>Use our powerful API to get word definitions and suggestions instantly.</p>
+
+        <h2>How to Use</h2>
+        <p>1. Generate your API key from our <a href="https://platform.bitmindai.in" target="_blank" style="color:#ffcc00;">API Key Portal</a>.</p>
+        <p>2. Include our JavaScript file in your HTML:</p>
+        <div class="code-box">
+            <code>&lt;script src="https://platform.bitmindai.in/static/api.js"&gt;&lt;/script&gt;</code>
+        </div>
+
+        <p>3. Call the API using the following JavaScript snippet:</p>
+        <div class="code-box" id="code-snippet">
+<code>
+&lt;script&gt;
+    function loadScript(src, callback) {
+        const script = document.createElement("script");
+        script.src = src;
+        script.onload = callback;
+        document.head.appendChild(script);
+    }
+
+    loadScript("https://platform.bitmindai.in/static/api.js", async function () {
+        const apiKey = "YOUR_API_KEY_HERE"; // Replace with your actual API key
+        const word = "example";  
+
+        try {
+            const suggestions = await matchWord(word, apiKey);
+            console.log("Suggestions:", suggestions);
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    });
+&lt;/script&gt;
+</code>
+        </div>
+        
+        <button onclick="copyCode()">Copy Code</button>
+
+        <div class="footer">
+            <p>&copy; 2025 BitMindAI. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function copyCode() {
+            const codeBox = document.getElementById("code-snippet").innerText;
+            navigator.clipboard.writeText(codeBox).then(() => {
+                alert("Code copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+</html>
