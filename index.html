@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create API Key</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <div class="container">
@@ -17,16 +17,17 @@
             <button type="submit">Generate API Key</button>
         </form>
 
-        <div id="result" class="hidden">
+        <div id="result">
             <p><strong>Your API Key:</strong></p>
             <div class="key-box">
                 <span id="apiKey"></span>
                 <button id="copyBtn">Copy</button>
             </div>
+            <p>Learn how to use the api: <a href="dictionary/usage/">How to use?</a> </p>
             <p><small>This key expires in <strong>1 month</strong>. Keep it safe!</small></p>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="static/script.js"></script>
 </body>
 </html>

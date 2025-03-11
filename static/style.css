@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #2a2a2a;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #cc5200;
+}
+
+.hidden {
+    display: none;
+}
+
+.key-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.key-box input {
+    flex: 1;
+    background: #333;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.key-box button {
+    background: #007bff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.key-box button:hover {
+    background: #0056b3;
+}
+
+#apiKey{
+    width: 100%;
+    position: relative;
+}
+
+#apiKey::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    right: 60px;
+    backdrop-filter: blur(10px); /* Adds blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    pointer-events: none;
+}
