@@ -19,8 +19,7 @@ async function matchWord(word, apiKey) {
     }
 }
 
-async function getWord(word) {
-    let apiKey = localStorage.getItem("api_key");
+async function getWord(word, apiKey) {
     if (!apiKey) {
         console.error("No API key available");
         return null;
