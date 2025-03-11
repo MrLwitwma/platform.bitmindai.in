@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create API Key</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Get Your Free API Key</h1>
+        <p>Enter your email to receive an API key valid for <strong>1 month</strong> with <strong>4000 calls (200/day)</strong>.</p>
+        
+        <form id="apiForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter Login password">
+            <button type="submit">Generate API Key</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <p><strong>Your API Key:</strong></p>
+            <div class="key-box">
+                <span id="apiKey"></span>
+                <button id="copyBtn">Copy</button>
+            </div>
+            <p><small>This key expires in <strong>1 month</strong>. Keep it safe!</small></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
