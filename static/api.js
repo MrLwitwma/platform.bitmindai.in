@@ -33,7 +33,7 @@ async function getWord(word, apiKey) {
         });
 
         let data = await response.json();
-        return data.data || data[word] || null;
+        return data || null;
     } catch (error) {
         console.error("Error fetching word data:", error);
         return null;
