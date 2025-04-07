@@ -5,7 +5,7 @@ document.getElementById("apiForm").addEventListener("submit", async function (ev
     if (!email) return alert("Please enter your email.");
 
     try {
-        const response = await fetch("https://deepspaceai.pythonanywhere.com/v1/api/create/dictionary", {
+        const response = await fetch("https://deepspaceai.pythonanywhere.com/v1/api/create/dictionary/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email })
@@ -15,8 +15,12 @@ document.getElementById("apiForm").addEventListener("submit", async function (ev
         console.log(result)
 
         if (response.ok) {
-            document.getElementById("apiKey").innerText = result.api_key;
-            document.getElementById("result").classList.remove("hidden");
+            document.getElementById('loading').classList.remove("hidden")
+            setTimeout(() => {
+                document.getElementById('loading').classList.add("hidden")
+                document.getElementById("apiKey").innerText = result.api_key;
+                document.getElementById("result").classList.remove("hidden");
+            }, 4000);
         } else {
             alert(result.error || "Something went wrong.");
         }
