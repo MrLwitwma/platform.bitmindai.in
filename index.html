@@ -15,7 +15,14 @@
             <input type="email" id="email" placeholder="Enter your email" required>
             <!-- <input type="password" id="password" placeholder="Enter Login password"> -->
             <button type="submit">Generate API Key</button>
+            <p>Blog on how to use the api key: <a href="https://bitmindai.in/blogs/vocara-dictionary-api/" target="_blank">Learn how to use?</a></p>
         </form>
+
+        <div id="loading" class="hidden">
+            <p>
+                <h3>Check your Email or Gmail for verification</h3>
+            </p>
+        </div>
 
         <div id="result" class="hidden">
             <p><strong>Your API Key:</strong></p>
@@ -23,7 +30,7 @@
                 <span id="apiKey"></span>
                 <button id="copyBtn">Copy</button>
             </div>
-            <p>Learn how to use the api: <a href="dictionary/usage/">How to use?</a> </p>
+            <p>Learn how to use the api: <a href="dictionary/usage/">Code for using.</a> </p>
             <p><small>This key expires in <strong>1 month</strong>. Keep it safe!</small></p>
         </div>
     </div>
