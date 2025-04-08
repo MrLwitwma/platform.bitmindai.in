@@ -4,8 +4,11 @@ document.getElementById("apiForm").addEventListener("submit", async function (ev
     const email = document.getElementById("email").value;
     if (!email) return alert("Please enter your email.");
 
+    let apiUrl = "https://deepspaceai.pythonanywhere.com/v1/api/create/dictionary"
+    // apiUrl = "http://127.0.0.1:5000/v1/api/create/dictionary"
+
     try {
-        const response = await fetch("https://deepspaceai.pythonanywhere.com/v1/api/create/dictionary", {
+        const response = await fetch(apiUrl, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email })
